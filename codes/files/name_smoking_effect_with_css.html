@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head><title>smoke text</title></head>
+<style>
+body{
+	margin:0;
+	padding:0;
+	font-family:Algerian;
+	
+	}
+.smoke{
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+}
+ul{
+	margin:0;
+	padding:0;
+	display:flex;
+	list-style:none;
+	}
+ul li{
+		color:#fff;
+		font-size:15em;
+		letter-spacing:20px;
+		text-shadow:200px 90px 16px #000000;
+		}
+ul li:nth-child(1){
+	color:red;
+	}
+	ul li:nth-child(2){
+	color:green;
+	}
+	ul li:nth-child(3){
+	color:blue;
+	}
+	ul li:nth-child(4){
+	color:yellow;
+	}
+	ul li:nth-child(5){
+	color:skyblue;
+	}
+	ul li:nth-child(6){
+	color:purple;
+	}
+	ul li:nth-child(7){
+	color:tomato;
+	}
+	ul li:nth-child(8){
+	color:blue;
+	}
+ul:hover li{
+	animation:animate 4s alternate infinite;
+	animation-iteration-count:infinite;
+	}
+@keyframes animate{
+	0%{
+		transform:rotate(0deg) translatey(0px);
+		opacity:1;
+		filter:blur(1px);
+	}
+	100%
+	{
+	transform:rotate(30deg) translatey(-200px);
+	opacity:0;
+	filter:blur(10px);
+	color:#fff;
+	}
+}
+ul li: nth-child(1){
+	animation-delay: 0.1s;
+}
+ul li: nth-child(2){
+	animation-delay: 0.4s;
+}
+ul li: nth-child(3){
+	animation-delay: 0.6s;
+}
+ul li: nth-child(4){
+	animation-delay: 0.8s;
+}
+ul li: nth-child(5){
+	animation-delay: 1s;
+}
+ul li: nth-child(6){
+	animation-delay: 1.3s;
+}
+ul li: nth-child(7){
+	animation-delay: 1.6s;
+}
+
+
+</style>
+<body>
+<a href="#">
+			<div class="smoke">
+			<ul>
+			<li><I>V</I></li>
+			<li><I>A</I></li>
+			<li><I>I</I></li>
+			<li><I>B</I></li>
+			<li><I>H</I></li>
+			<li><I>A</I></li>
+			<li><I>V</I></li>
+			
+			</ul>
+			</div>
+			
+			
+			
+			
+			</html>

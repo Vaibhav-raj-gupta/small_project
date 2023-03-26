@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New form </title>
+</head>
+<style type="text/css">
+
+	body{
+		background-color: black;
+	}
+	
+	table{
+		text-align: center;
+		margin: auto;
+		margin-top: 10%;
+		padding: 10px;
+		padding-left: 20px;
+		width: 30%;
+		border:1px solid black;
+		font-size: 20px;
+		background-image: repeating-linear-gradient(red,yellow);
+		color: white;
+	}
+	tr{
+		text-align: center;
+		border:1px black;
+	}
+	td{
+		border:2px black;
+		padding-top: 20px;
+	}
+	input{
+		font-size: 20px;
+	}
+	button{
+		width: 100%;
+		font-size: 20px;
+	}
+</style>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+<body >
+<form action="form_php.php" method="post">
+	<table>
+
+	<tr>
+		<td class="">First Name:-</td>
+		<td class=""><input type="text" name="fname" required=""></td>
+	</tr>
+	<tr>
+		<td class="">Last Name :-</td>
+		<td class=""><input type="text" name="lname"></td>
+	</tr>
+	<tr>
+		<td class="">Father Name:-</td>
+		<td class=""><input type="text" name="ffname"></td>
+	</tr>
+	<tr>
+		<td class="">Mother Name:-</td>
+		<td class=""><input type="text" name="mname"></td>
+	</tr>
+	<tr>
+		<td class="">Phone Number</td>
+		<td class=""><input type="varcher" name="phone"></td>
+	</tr>
+	<tr>
+		<td class="">Email:-</td>
+		<td class=""><input type="text" name="em"></td>
+	</tr>
+	<tr>
+		<td class="">Address:-</td>
+		<td class=""><input type="text" name="address"></td>
+	</tr>
+	<tr><th class=""><button onclick="important()">submit</button></th></tr>
+
+	<script type="text/javascript">
+		function important() {
+
+		 confirm("Are You Sure Want to Submit");
+
+		 var txt;
+		 if (confirm("Are You Sure Want to Submit")) {
+		 	txt="You pressed ok!";
+		 }
+		 else{
+		 	txt="You Pressed Cancel";
+		 }
+		}
+
+	</script>
+
+</table>
+</form>
+</body>
+</html>
+	  

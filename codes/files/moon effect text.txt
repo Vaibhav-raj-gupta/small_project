@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to create a loader</title>
+</head>
+<style>
+	body
+	{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:black;
+	overflow:hidden;
+	height:100vh;
+}
+.moon{
+	background-image: linear-gradient(30deg,#13223f,#0e1a30);
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	position: relative;
+}
+.moon::before{
+	content: '';
+	background:white; 
+	position:absolute;
+	display:block;
+	height: 100%;
+	width: 100%;
+	border-radius:100%;
+	z-index: -1;
+	animation: 7s moonlight linear infinite alternate;
+}
+@keyframes moonlight{
+	0%{
+		transform: translate(-60px,60px) scale(0.9);
+	}
+	50%{
+		transform: translate(0px,0px) scale(1.09);
+		box-shadow: 0 0 100px yellow, 0 0 80px 30px tomato;
+		background: white;
+	}
+}                            
+</style>
+<body>
+<div class="moon"></div>
+</body>
+</html>

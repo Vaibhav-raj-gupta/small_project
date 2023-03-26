@@ -1,0 +1,389 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>ludogame designing</title>
+
+ </head>
+ <style type="text/css">
+ 	*,*:before,*:after{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	width: 600px;
+	height: 600px;
+	margin: 10px auto;
+	cursor: pointer;
+	border: 10px solid #000;
+}
+.container1,.container3{
+	width: 100%;
+	height: 40%;
+	display: flex;
+}
+.container2{
+	width: 100%;
+	height: 20%;
+	display: flex;
+}
+.row1-col1,
+.row1-col3,
+.row3-col1,
+.row3-col3{
+	width: 40%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	border: 2px solid #000;
+}
+.row1-col2,
+.row3-col2{
+	width: 20%;
+	height: 100%;
+}
+.row2-col1,
+.row2-col3{
+	width: 40%;
+	height: 100%;
+}
+.row2-col2{
+	width: 20%;
+	height: 100%;
+}
+.green{
+	background-color: #84c21f;
+}
+.red{
+	background-color: #dc2418;
+}
+.blue{
+	background-color: #0092dc;
+}
+.yellow{
+	background-color: #f6c700;
+}
+.white{
+	background-color: #fff;
+}
+.row1-col1-child,
+.row1-col3-child,
+.row3-col1-child,
+.row3-col3-child{
+	width: 80%;
+	height: 80%;
+	border-radius: 0%;
+}
+.row1-col1-child>div,
+.row1-col3-child>div,
+.row3-col1-child>div,
+.row3-col3-child>div{
+	width: 25%;
+	height: 25%;
+	margin: 12.5%;
+	border-radius: 50%;
+	border:3px solid #000;
+	float: left;
+	align-items: center;
+}
+.row1-col1-child>div:hover,
+.row1-col3-child>div:hover,
+.row3-col1-child>div:hover,
+.row3-col1-child>div:hover{
+	box-shadow: 2px 14px 28px rgba(0,0,0,.25), -2px 10px 28px rgba(0,0,0,.2)
+}
+.row1-col2>div,
+.row3-col2>div
+{
+	width: 33.33%;
+	height: 16.667%;
+	float: left;
+	border: 1px solid #000;
+}
+.row2-col1>div{
+	width: 16.33%;
+	height: 33.667%;
+	float: left;
+	border: 1px solid #000;
+}
+.row2-col3>div{
+	width: 16.66%;
+	height: 33.33%;
+	float: left;
+	border: 1px solid #000;
+}
+.icon{
+	margin:6px; 
+	border:14px solid white;
+	border-radius: 50%;
+	align-items: center;
+}
+.icon1{
+	margin:2px; 
+	border:16px  solid #84c21f;
+	border-radius: 20%;
+	align-items: center;
+}
+.icon2{
+	margin:2px; 
+	border:16px  solid #dc2418;
+	border-radius: 20%;
+	align-items: center;
+}
+.icon3{
+	margin:2px; 
+	border:16px  solid #f6c700 ;
+	border-radius: 20%;
+	align-items: center;
+}
+.icon4{
+	margin:2px; 
+	border-radius: 20%;
+	border:16px  solid #0092dc;
+	align-items: center;
+}
+.contain-triangle{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.triangle-right{
+	width: 0;
+	height: 0;
+	border-top: 55px solid transparent;
+	border-left: 55px solid #84c21f;
+	border-bottom: 55px solid transparent;
+	position: absolute;
+	left:-5px;
+	top: 5px;
+}
+.triangle-upper{
+	width: 0;
+	height: 0;
+	border-left: 55px solid transparent;
+	border-right: 55px solid transparent;
+	border-bottom:  55px solid #dc2418;
+	position: absolute;
+	left: 2px;
+	bottom: 0;
+}
+.triangle-left{
+	width: 0;
+	height: 0;
+	border-right: 55px solid #0092dc;
+	border-bottom: 55px solid transparent;
+	border-top: 55px solid transparent;
+	position: absolute;
+	right:0;
+	top: 5px;
+}
+.triangle-down{
+	width: 0;
+	height: 0;
+	border-left: 55px solid transparent;
+	border-right: 58px solid transparent;
+	border-top: 55px solid #f6c700;
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+.home{
+	height: 60%;
+	width: 60%;
+	margin:22px;
+	position: absolute;
+	background: #fff;
+	border-radius: 50%;
+	z-index: 1; 
+}
+.text{
+	width: 80%;
+	height: 80%;
+	margin: 26px 4px;
+	font-size: 10px;
+	color: #000;
+	font-family: 'Montserrat';
+}
+
+
+ </style>
+ <body>
+ 		<div class="container">
+ 			<div class="container1">
+ 				<!--green--><div class="row1-col1 green">
+ 				<div class="row1-col1-child white">
+ 					<div class="green"></div>
+ 					<div class="green"></div>
+ 					<div class="green"></div>
+ 					<div class="green"></div>
+ 				</div>
+
+ 			</div>
+ 				<!--path--><div class="row1-col2" >
+ 					<!--1st row-->
+ 					<div></div>
+ 					<div></div>
+ 					<div></div>
+ 					<!--2st row-->
+ 					<div></div>
+ 					<div class="yellow"></div>
+ 					<div class="yellow">
+ 						<div class="icon">
+ 						</div>
+ 					</div>
+ 					<!--3st row-->
+ 					<div>
+ 						<div class="icon1"></div>
+ 					</div>
+ 					<div class="yellow"></div>
+ 					<div></div>
+ 					<!--4st row-->
+ 					<div></div>
+ 					<div class="yellow"></div>
+ 					<div></div>
+ 					<!--5st row-->
+ 					<div></div>
+ 					<div class="yellow"></div>
+ 					<div></div>
+ 					<!--6st row-->
+ 					<div></div>
+ 					<div class="yellow"></div>
+ 					<div></div>
+ 				</div>
+ 				<!--yellow--><div class="row1-col3 yellow">
+ 				<div class="row1-col3-child white">
+ 					<div class="yellow"></div>
+ 					<div class="yellow"></div>
+ 					<div class="yellow"></div>
+ 					<div class="yellow"></div>
+ 		</div>
+ 	</div>
+ </div>
+ 				<div class="container2">
+ 				<!--path--><div class="row2-col1">
+ 					<!--1st row-->
+ 					<div></div>
+ 					<div class="green">
+ 						<div class="icon"></div>
+ 					</div>
+ 					<div class=""></div>
+ 					<div></div>
+ 					<div></div>
+ 					<div></div>
+ 					<!--2st row-->
+ 					<div></div>
+ 					<div class="green"></div>
+ 					<div class="green"></div>
+ 					<div class="green"></div>
+ 					<div class="green"></div>
+ 					<div class="green"></div>
+ 					<!--3st row-->
+ 					<div></div>
+ 					<div></div>
+ 					<div>
+ 						<div class="icon2"></div>
+ 					</div>
+ 					<div></div>
+ 					<div></div>
+ 					<div></div>
+ 				</div>
+
+ 					
+
+ 				<!--home--><div class="row2-col2">
+ 						<div class="contain-triangle">
+
+ 										<div class="home">
+ 											<div class="text">
+ 												<h1>HOME</h1>
+ 											</div>
+ 										</div>
+ 								<div class="triangle-right"></div><!--green-->
+ 								<div class="triangle-upper"></div><!--yellow-->
+ 								<div class="triangle-left"></div><!--blue-->
+ 								<div class="triangle-down"></div><!--red-->
+ 								
+ 							</div>
+ 						</div>
+ 				<!--path--><div class="row2-col3">
+ 					<!--1st row-->
+ 					<div></div>
+ 					<div></div>
+ 					<div></div>
+ 					<div>
+ 						<div class="icon3"></div>
+ 					</div>
+ 					<div></div>
+ 					<div></div>
+ 					<!--2st row-->
+ 					<div class="blue"></div>
+ 					<div class="blue"></div>
+ 					<div class="blue"></div>
+ 					<div class="blue"></div>
+ 					<div class="blue"></div>
+ 					<div></div>
+ 					<!--3st row-->
+ 					<div></div>
+ 					<div></div>
+ 					<div></div>
+ 					<div></div>
+ 					<div class="blue">
+ 						<div class="icon"></div>
+ 					</div>
+ 					<div></div>
+ 				</div>
+ 			</div>
+
+ 			<div class="container3">
+ 				<!--red--><div class="row3-col1 red">
+ 				<div class="row3-col1-child white">
+ 					<div class="red"></div>
+ 					<div class="red"></div>
+ 					<div class="red"></div>
+ 					<div class="red"></div>
+ 				</div>
+ 			</div>
+ 				
+ 				<!--path--><div class="row3-col2">
+ 					<!--1st row-->
+ 					<div></div>
+ 					<div class="red"></div>
+ 					<div></div>
+ 					<!--2st row-->
+ 					<div></div>
+ 					<div class="red"></div>
+ 					<div></div>
+ 					<!--3st row-->
+ 					<div></div>
+ 					<div class="red"></div>
+ 					<div></div>
+ 					<!--4st row-->
+ 					<div></div>
+ 					<div class="red"></div>
+ 					<div>
+ 						<div class="icon4"></div>
+ 					</div>
+ 					<!--5st row-->
+ 					<div class="red">
+ 						<div class="icon"></div>
+ 					</div>
+ 					<div class="red"></div>
+ 					<div></div>
+ 					<!--6st row-->
+ 					<div></div>
+ 					<div></div>
+ 					<div></div>
+ 				</div>
+ 				<!--blue--><div class="row3-col3 blue">
+ 				<div class="row3-col3-child white">
+ 					<div class="blue"></div>
+ 					<div class="blue"></div>
+ 					<div class="blue"></div>
+ 					<div class="blue"></div>
+ 					</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </body>
+ </html>
