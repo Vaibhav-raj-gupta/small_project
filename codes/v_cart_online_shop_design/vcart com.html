@@ -11,6 +11,7 @@ http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.cs
 .dropdown {
         position: relative;
         display: inline-block;
+		cursor: pointer;
     }
 
     .dropdown-content {
@@ -18,10 +19,17 @@ http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.cs
         position: absolute;
         background-color: #2874F0;
         min-width: 120px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
+        box-shadow: 0px 8px 16px 0px black;
         padding: 12px 16px;
         color: white;
+		border-width: 1px;
+		border-color: red;
+		border-radius: 5px;
     }
+	.dropdown-content p{
+		border: 10px;
+		border-color: black;
+	}
 	
 	
     .dropdown:hover .dropdown-content {
@@ -44,7 +52,7 @@ a{
 
 	<td><input type="text" placeholder="Search for products, brands and more" style="width: 450px;" height="35px;"><input type="button" value="Search"></td>
 	
-	<th><a href="index.html"><font color="white" font size="4px">Login & Signup</a></th>
+	<th><a href="./login.html"><font color="white" font size="4px">Login & Signup</a></th>
 	<td><font color="white"><a href="#">More</a></td>
 	<td><i><class= fa fa-cars><font color="white">cart</td></i>
 	</tr>
@@ -58,7 +66,7 @@ a{
                     <p><a href="#" class="link"> Mobile</a></p>
 					<p><a href="#" class="link"> Pants</a></p>
 					<p><a href="#" class="link"> Shoes</a></p>
-					<p><a href="file:///D:/xampp_file//htdocs/old_file/v_cart/laptop.html" class="link">Laptops</a></p>
+					<p><a href="./laptop.html" class="link">Laptops</a></p>
                     </div>
                 </div>
             </th>
@@ -66,7 +74,7 @@ a{
             <th width="12.5%">
                 <div class="dropdown"> <span> Tv & Apppcations </span>
                     <div class="dropdown-content">
-                    <p><a href="file:///D:/xampp_file//htdocs/old_file/v_cart/tv.html" class="link"> L.E.D</a></p>
+                    <p><a href="./tv.html" class="link"> L.E.D</a></p>
 					<p><a href="#" class="link">L.C.D</a></p>
 					<p><a href="#" class="link"> T.V. tools</a></p>
 					<p><a href="#" class="link"> Set-top Box</a></p>
@@ -77,7 +85,7 @@ a{
             <th width="12.5%">
                 <div class="dropdown"> <span> Men </span>
                     <div class="dropdown-content">
-                    <p><a href="file:///D:/xampp_file//htdocs/old_file/v_cart//men.html" class="link"> Clothes</a></a></p>
+                    <p><a href=".//men.html" class="link"> Clothes</a></a></p>
 					<p><a href="#" class="link"> Watch</a></p>
 					<p><a href="#" class="link"> Sun-Glasses</a></p>
 					<p><a href="#" class="link"> Shoes</a></p>
@@ -91,7 +99,7 @@ a{
 			<th width="12.5%">
                 <div class="dropdown"> <span> Women </span>
                     <div class="dropdown-content">
-						<p><a href="file:///D:/xampp_file//htdocs/old_file/v_cart/women.html" class="link"> Clothes</a></a></p>
+						<p><a href="./women.html" class="link"> Clothes</a></a></p>
 						<p><a href="#" class="link">Watch</a></p>
 						<p><a href="#" class="link">Sun-Glasses</a></p>
 						<p><a href="#" class="link">Sandles</a></p>
@@ -105,7 +113,7 @@ a{
 			<th width="12.5%">
                 <div class="dropdown"> <span> Kids </span>
                     <div class="dropdown-content">
-						<p><a href="file:///D:/xampp_file/htdocs/old_file/project_file_codes_/codes/v_cart_online_shop_design/child.html" class="link"> Clothes</a></a></p>
+						<p><a href="./child.html" class="link"> Clothes</a></a></p>
 						<p><a href="#" class="link">Nepkins</a></p>
 						<p><a href="#" class="link">Baby toys</a></p>
 						<p><a href="#" class="link">Shoes & Sleepers</a></p>
@@ -121,7 +129,7 @@ a{
                     <div class="dropdown-content">
 						<p> Kitchen tools</p>
 						<p> Crockries</p>
-						<p><a href="file:///D:/xampp_file//htdocs/old_file/v_cart/furniture.html"> Beds</a></p>
+						<p><a href="./furniture.html"> Beds</a></p>
 						<p> Tables</p>
 						<p> Almira</p>
 						<p> Sofa</p>
